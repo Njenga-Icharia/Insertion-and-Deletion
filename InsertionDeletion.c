@@ -7,22 +7,22 @@ int main() {
         printf("\n1. Insert\n2. Delete\n3. Display\n4. Exit\nChoice: ");
         scanf("%d", &choice);
 
-        if (choice == 1) { // Insert
+        if (choice == 1) { 
             printf("Enter element and position: ");
             scanf("%d %d", &element, &position);
             for (int i = size; i > position; i--) arr[i] = arr[i - 1];
             arr[position] = element;
             size++;
-        } else if (choice == 2) { // Delete
+        } else if (choice == 2) { 
             printf("Enter position: ");
             scanf("%d", &position);
             for (int i = position; i < size - 1; i++) arr[i] = arr[i + 1];
             size--;
-        } else if (choice == 3) { // Display
+        } else if (choice == 3) { 
             printf("Array: ");
             for (int i = 0; i < size; i++) printf("%d ", arr[i]);
             printf("\n");
-        } else if (choice == 4) break; // Exit
+        } else if (choice == 4) break; 
         else printf("Invalid choice!\n");
     }
 
